@@ -6,7 +6,7 @@ const nav = [
   { name: "Project Overview", href: "/overview" },
   { name: "Timeline", href: "/timeline" },
   { name: "Data Validation", href: "/datavalidation/datasets" },
-  { name: "AI Model", href: "/aimodel" },
+  { name: "AI Model", href: "/aimodel/visualization" },
   { name: "Explainability", href: "/explainability" },
   { name: "Visualization", href: "/visualization" },
 ]
