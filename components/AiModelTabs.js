@@ -5,6 +5,7 @@ export default function AiModelTabs({ active }) {
     { label: 'Visualization', href: '/aimodel/visualization' },
     { label: 'AI Model Validation', href: '/aimodel/validation' },
     { label: 'Metrics', href: '/aimodel/metrics' },
+    { label: 'Cross Validation', href: '/aimodel/crossvalidation' }, // NEW
   ];
   return (
     <div className="mb-8 flex gap-2 border-b-2 border-blue-200">
