@@ -1,13 +1,22 @@
-'use client';
+"use client";
+
+import Link from "next/link";
+
 export default function Topbar() {
   return (
-    <header className="sticky top-0 z-10 border-b border-gray-200 bg-white/80 backdrop-blur">
-      <div className="mx-auto flex h-12 max-w-screen-2xl items-center justify-between px-4">
-        <div className="text-sm font-medium text-gray-900">
-          Pyeongtaek Smart Platform
+    <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-slate-200">
+      <div className="flex items-center justify-between container-p h-14">
+        <div className="flex items-center gap-3">
+          <div className="h-2 w-2 rounded-full bg-accent-500 shadow-[0_0_12px_rgba(16,185,129,0.7)]" />
+          <span className="text-sm text-slate-700">
+            Pyeongtaek Smart Platform
+          </span>
         </div>
-        <div className="text-xs text-gray-500">
-          G3 · G7 · Fusion
+        <div className="flex items-center gap-3">
+          <Link href="/about" className="text-sm text-slate-600 hover:text-brand-700 hover:underline">
+            About
+          </Link>
+          <div className="h-8 w-8 rounded-full bg-gradient-to-tr from-brand-600 to-brand-500" />
         </div>
       </div>
     </header>

@@ -1,28 +1,23 @@
+// app/layout.tsx
+import "./globals.css";                // or "../styles/tailwind.css" if you used that
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
-import "../styles/globals.css";
 
 export const metadata = {
   title: "Pyeongtaek Smart Platform",
+  description: "G3/G7 initiatives · schedules · infrastructure · fusion",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  // TODO: wire real role from auth/session
-  const role: "user" | "admin" = "admin";
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-gray-50 text-gray-900">
-        <Topbar />
-        <div className="mx-auto flex max-w-screen-2xl">
-          <Sidebar role={role} />
-          <main className="flex-1 p-4">
-            <div style={{ padding: "16px" }}>{children}</div>
-          </main>
+    <html lang="en" className="h-full">
+      <body className="min-h-full">
+        <div className="flex min-h-screen">
+          <Sidebar />
+          <div className="flex-1 flex flex-col min-w-0">
+            <Topbar />
+            <main className="container-p py-6">{children}</main>
+          </div>
         </div>
       </body>
     </html>
