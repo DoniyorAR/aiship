@@ -3,14 +3,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-/**
- * G3 Demo: Multi-step Tree Health Check interactive demo
- * - Step 1: Enter Tree ID or Upload / Take Photo
- * - Step 2: AI Prediction (simulated) -> segmentation overlay on canvas
- * - Step 3: Height & DBH (simulated numbers) + health score
- *
- * No external images required — everything is rendered dynamically.
- */
 
 /* ----------------- Helpers ----------------- */
 function randBetween(min: number, max: number) {
@@ -34,7 +26,7 @@ async function createDemoCoupon(treeId: string) {
 type Step = 1 | 2 | 3;
 
 /* ----------------- Component ----------------- */
-export default function G3PageDemo(): JSX.Element {
+export default function G3PageDemo():  {
   const [step, setStep] = useState<Step>(1);
 
   // Input step
